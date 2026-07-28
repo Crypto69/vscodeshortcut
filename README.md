@@ -10,7 +10,7 @@ A macOS Finder Quick Action — right-click any folder and choose **"Open in VS 
 ## Install
 
 ```bash
-git clone https://github.com/<your-username>/vscodeshortcut.git
+git clone https://github.com/Crypto69/vscodeshortcut.git
 cd vscodeshortcut
 ./install.sh
 ```
