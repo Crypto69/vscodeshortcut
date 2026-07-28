@@ -40,7 +40,18 @@ Prefer not to run someone else's script? You can build the same Quick Action fro
 
 Automator saves this straight into `~/Library/Services/`, the same place Method 1's installer copies to — so from here on, both methods behave identically.
 
-## Use it
+## Method 3: Terminal
+
+Don't want a Finder Quick Action at all? If your terminal has the `code` command available, you can open any folder as a VS Code project directly:
+
+```bash
+cd /path/to/your/project
+code .
+```
+
+If `code` isn't recognized, enable it first: open VS Code, press `⌘ + ⇧ + P`, run **Shell Command: Install 'code' command in PATH**, then restart your terminal.
+
+## Use it (Methods 1 & 2)
 
 Right-click a folder in Finder and look for **"Open in VS Code"** (top-level or under a **Quick Actions** submenu). If it doesn't show up right away:
 
@@ -48,7 +59,7 @@ Right-click a folder in Finder and look for **"Open in VS Code"** (top-level or 
 - Check **System Settings → General → Login Items & Extensions → Extensions** and enable it there, or
 - Right-click a folder → **Quick Actions → Customize...** and toggle it on.
 
-## How it works
+## How it works (Methods 1 & 2)
 
 Both methods produce a standard Automator "Quick Action" (a `.workflow` bundle) scoped to folders. They just get there differently:
 
@@ -64,7 +75,7 @@ Both methods produce a standard Automator "Quick Action" (a `.workflow` bundle) 
 
 - **Method 2** (built in Automator) uses the built-in **Open Finder Items** action instead of a shell script, pointed at Visual Studio Code — no scripting involved.
 
-## Uninstall
+## Uninstall (Methods 1 & 2)
 
 ```bash
 rm -rf ~/Library/Services/"Open in VS Code.workflow"
